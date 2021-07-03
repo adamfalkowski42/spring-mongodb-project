@@ -1,0 +1,25 @@
+ -- For whatever reason had major issues / confusion / conflicts using the following mongodb-reactive dependency in the application
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+		</dependency>
+	
+	-- changed it to this and spring seemed to pick up the changes : need to look into issues with mongodb-reactive
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		
+		
+
+## Adding in unique index to fields within the document
+	-- @Indexed(unique=true) -- above the field name
+	-- to enable this you will also need to include this in the application properties file
+	
+## Quiz question 1 
+	-- look into what an Optional generic is and why Spring / mongo resturns it. 
+## Quiz Question 2
+	-- when using mongo repository they are type safe
+## Quiz Question 3
+	-- What type of annotation can you use to build out custom queries in MongoDB?
+		-- Answer: @Query("") -- research the rest of this statement
